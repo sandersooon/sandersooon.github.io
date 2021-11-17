@@ -737,6 +737,13 @@ i.far {
 	font-size: 14px;
 	height: 23px;
 }
+.covid > .content > .information > .image {
+  border-color: #b4d8aa;
+}
+
+.covid > .content > .razdel {
+  background: #b4d8aa;
+}
 
 .rod_but {
 	width: 136px;
