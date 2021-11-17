@@ -143,8 +143,8 @@ swiper.on('slideChange', function () {
 		var sss = swiper.realIndex + 1;
 		$('.dit_dot:nth-child(' + sss + ')').addClass('act');
 
-		$('html').css('background', '#C9D8E7');
-		$('.content').css('background', '#E4ECF3');
+		$('html').css('background', '#b4d8aa');
+		$('.content').css('background', '#b4d8aa');
 	}
 });
 
