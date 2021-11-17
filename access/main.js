@@ -232,6 +232,57 @@ setTimeout(function () {
 
 }, 700);
 $('.diyalogo').fadeIn(500);
+if($('.covid').length == 1){
+  var j = 0
+  var covid = document.querySelector(".covid");
+  var playing = false;
+  covid.addEventListener('click', function () {
+    j = j + 1;
+
+    setTimeout(function () {
+      $(".cqricon").click();
+    }, 300);
+
+    $(".cqricon").on('click', function () {
+      return false;
+    });
+
+    $(".cshicon").on('click', function () {
+      return false;
+    });
+
+    if (j = 1) {
+      setTimeout(function () {
+        $('.covid > .content > .unloaded').css('opacity', '0');
+        $('.covid > .content > .loaded').css('opacity', '1');
+      }, 500);
+    }
+
+    if (playing)
+    return;
+
+    $('.covid > .content').css('filter', 'brightness(0.8)');
+    setTimeout(function () {
+      $('.covid > .content').css('filter', 'brightness(1)');
+    }, 200);
+
+    playing = true;
+    anime({
+      targets: covid,
+      rotateY: {
+        value: '+=180',
+        delay: 0
+      },
+      easing: 'linear',
+      duration: 100,
+      complete: function (anim) {
+        playing = false;
+      }
+    });
+
+  });
+}
+
 
 var i = 0
 
